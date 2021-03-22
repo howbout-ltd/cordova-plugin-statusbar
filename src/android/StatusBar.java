@@ -249,6 +249,8 @@ public class StatusBar extends CordovaPlugin {
                                 | View.SYSTEM_UI_FLAG_VISIBLE)
                                 & ~View.SYSTEM_UI_FLAG_FULLSCREEN);
             }
+            // Ensure the layout isn't fullscreen
+            window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
     }
 
